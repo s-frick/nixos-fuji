@@ -51,6 +51,8 @@
     #jack.enable = true;
   };
 
+  programs.zsh.enable = true;
+
   # Define a user account. Set a password with ‘passwd’.
   users.users.sebi = {
     isNormalUser = true;
@@ -59,6 +61,7 @@
     packages = with pkgs; [
 	neovim
     ];
+    shell = pkgs.zsh;
   };
 
   programs.firefox.enable = true;
